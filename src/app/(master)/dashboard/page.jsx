@@ -32,7 +32,7 @@ export default function DashboardPage() {
                 <div className="col-span-12 lg:col-span-8 space-y-8">
 
                     {/* Hero Action Card */}
-                    <div className="bg-blue-50/40 rounded-3xl p-8 border border-blue-100/50 h-[300px] flex flex-col justify-center relative overflow-hidden group">
+                    <div className="bg-primary/5 rounded-3xl p-8 border border-primary h-[300px] flex flex-col justify-center relative overflow-hidden group">
                         <div className="relative z-10 space-y-4">
                             <h3 className="text-xl font-bold text-slate-900 max-w-xs leading-tight">
                                 Start a high-definition video call with real-time interpretation.
@@ -40,7 +40,7 @@ export default function DashboardPage() {
                             <p className="text-slate-500 max-w-[240px] text-sm">
                                 Optimized for accessibility with high-contrast UI and low-latency streaming.
                             </p>
-                            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-5 rounded-xl text-sm font-bold shadow-lg shadow-blue-500/10 transition-all hover:scale-[1.02] active:scale-95 gap-2">
+                            <Button className="bg-chart-2 hover:bg-chart-3 text-white px-6 py-5 rounded-xl text-sm font-bold shadow-lg shadow-blue-500/10 transition-all hover:scale-[1.02] active:scale-95 gap-2">
                                 <Video className="w-4 h-4" />
                                 Start New Call
                             </Button>
@@ -58,7 +58,7 @@ export default function DashboardPage() {
                             icon={<Keyboard className="w-6 h-6" />}
                             title="Join with Code"
                             description="Enter a meeting code or invitation link to join an existing session."
-                            colorClass="bg-blue-50 text-blue-600"
+                            colorClass="bg-chart-2/10 text-primary"
                         />
                         <QuickActionCard
                             icon={<Calendar className="w-6 h-6" />}
@@ -85,8 +85,8 @@ export default function DashboardPage() {
                                 />
                             ))}
                         </div>
-                        <Button variant="default" className="w-full mt-8 py-5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold tracking-widest text-[10px]">
-                            RUN FULL TEST
+                        <Button variant="default" className="uppercase w-full mt-8 py-5 rounded-xl bg-foreground hover:bg-slate-800 text-white font-bold tracking-widest text-[10px]">
+                            run full test
                         </Button>
                     </div>
 

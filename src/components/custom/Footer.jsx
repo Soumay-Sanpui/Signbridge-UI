@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Logo and Description */}
                     <div className="md:col-span-4 space-y-6">
                         <div className="flex items-center gap-2">
-                            <div className="bg-[#1D4ED8] p-1.5 rounded-md">
+                            <div className="bg-primary p-1.5 rounded-md">
                                 <Handshake className="text-white w-5 h-5" />
                             </div>
                             <span className="text-xl font-bold tracking-tight text-gray-900">Sign Bridge</span>
@@ -34,10 +34,10 @@ const Footer = () => {
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-6">Platform</h3>
                                 <ul className="space-y-4">
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Video Tools</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Accessibility</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Integrations</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Status</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Video Tools</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Accessibility</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Integrations</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Status</Link></li>
                                 </ul>
                             </div>
 
@@ -45,10 +45,10 @@ const Footer = () => {
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-6">Company</h3>
                                 <ul className="space-y-4">
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">About Us</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Careers</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Blog</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Press</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">About Us</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Careers</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Blog</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Press</Link></li>
                                 </ul>
                             </div>
 
@@ -56,10 +56,10 @@ const Footer = () => {
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-6">Legal</h3>
                                 <ul className="space-y-4">
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Privacy</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Terms</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">Compliance</Link></li>
-                                    <li><Link href="#" className="text-gray-500 hover:text-[#1D4ED8] transition-colors">DPA</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Privacy</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Terms</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">Compliance</Link></li>
+                                    <li><Link href="#" className="text-gray-500 hover:text-primary transition-colors">DPA</Link></li>
                                 </ul>
                             </div>
                         </div>

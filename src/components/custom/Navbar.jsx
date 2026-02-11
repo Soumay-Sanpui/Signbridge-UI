@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* Right - Login & Avatar */}
           <div className="ml-auto flex items-center gap-3">
-            <Button variant="cBridge" size="sm">
+            <Button variant="cBridge" size="sm" className={"font-semibold"}>
               Login
             </Button>
             <Avatar className="h-9 w-9 cursor-pointer">

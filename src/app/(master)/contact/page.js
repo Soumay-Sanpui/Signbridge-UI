@@ -16,8 +16,8 @@ const ContactPage = () => {
         <div className="min-h-screen bg-white">
             {/* Background blobs for flair */}
             <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
-                <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-[120px] opacity-60" />
-                <div className="absolute bottom-[10%] -right-[10%] w-[30%] h-[30%] bg-blue-50 rounded-full blur-[100px] opacity-60" />
+                <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-chart-2 rounded-full blur-[120px] opacity-60" />
+                <div className="absolute bottom-[10%] -right-[10%] w-[30%] h-[30%] bg-chart-2 rounded-full blur-[100px] opacity-60" />
             </div>
 
             <main className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
@@ -26,13 +26,13 @@ const ContactPage = () => {
                     {/* Left Column: Content & Info */}
                     <div className="flex flex-col gap-10">
                         <div className="space-y-6">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-chart-2 border border-primary text-white text-sm font-medium">
                                 <MessageSquare className="w-4 h-4" />
                                 <span>Contact Our Team</span>
                             </div>
                             <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
                                 Let&#39;s build <br />
-                                <span className="text-blue-600">better connections.</span>
+                                <span className="text-primary">better connections.</span>
                             </h1>
                             <p className="text-xl text-slate-500 leading-relaxed max-w-lg">
                                 Have questions about sign language optimization or real-time translation?
@@ -64,23 +64,23 @@ const ContactPage = () => {
 
                     {/* Right Column: Form */}
                     <div className="relative">
-                        <div className="absolute -inset-4 bg-blue-600/5 rounded-[40px] blur-sm -z-10" />
-                        <div className="bg-white border border-slate-100 p-8 lg:p-12 rounded-[32px] shadow-xl shadow-blue-900/5">
+                        <div className="absolute -inset-4 bg-primary/5 rounded-[40px] blur-sm -z-10" />
+                        <div className="bg-white border border-primary p-8 lg:p-12 rounded-md shadow-xl shadow-primary/5">
                             <form onSubmit={handleSubmit} className="space-y-8">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-3">
                                         <Label htmlFor="first-name">First Name</Label>
-                                        <Input id="first-name" placeholder="John" className="h-12 rounded-xl focus:ring-blue-600" />
+                                        <Input id="first-name" placeholder="John" className="h-12 rounded-xl focus:ring-ring" />
                                     </div>
                                     <div className="space-y-3">
                                         <Label htmlFor="last-name">Last Name</Label>
-                                        <Input id="last-name" placeholder="Doe" className="h-12 rounded-xl focus:ring-blue-600" />
+                                        <Input id="last-name" placeholder="Doe" className="h-12 rounded-xl focus:ring-ring" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-3">
                                     <Label htmlFor="email">Email Address</Label>
-                                    <Input id="email" type="email" placeholder="john@example.com" className="h-12 rounded-xl focus:ring-blue-600" />
+                                    <Input id="email" type="email" placeholder="john@example.com" className="h-12 rounded-xl focus:ring-ring" />
                                 </div>
 
                                 <div className="space-y-3">
@@ -89,17 +89,17 @@ const ContactPage = () => {
                                         id="message"
                                         rows={4}
                                         placeholder="Tell us about your project..."
-                                        className="flex w-full rounded-xl border border-input bg-transparent px-3 py-3 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 min-h-[120px] focus:ring-blue-600"
+                                        className="flex w-full rounded-xl border border-input bg-transparent px-3 py-3 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 min-h-[120px] focus:ring-ring"
                                     />
                                 </div>
 
-                                <Button type="submit" className="w-full h-14 rounded-xl bg-blue-600 hover:bg-blue-700 text-base font-semibold transition-all hover:scale-[1.01] active:scale-[0.99] gap-2">
+                                <Button type="submit" className="w-full h-14 rounded-xl bg-chart-2 hover:bg-chart-3 text-base font-semibold transition-all hover:scale-[1.01] active:scale-[0.99] gap-2">
                                     Send Message
                                     <Send className="w-4 h-4" />
                                 </Button>
 
                                 <p className="text-center text-sm text-slate-400">
-                                    By clicking send, you agree to our <span className="text-blue-600 underline cursor-pointer">Privacy Policy</span>.
+                                    By clicking send, you agree to our <span className="text-primary underline cursor-pointer">Privacy Policy</span>.
                                 </p>
                             </form>
                         </div>
@@ -112,13 +112,13 @@ const ContactPage = () => {
 };
 
 const ContactInfoItem = ({ icon, title, detail, desc }) => (
-    <div className="flex items-start gap-5 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
-        <div className="p-3 bg-blue-100 text-blue-600 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-all">
+    <div className="flex items-start gap-5 p-4 rounded-2xl transition-colors group">
+        <div className="p-3 bg-chart-2 text-white rounded-xl group-hover:bg-chart-3 group-hover:text-white transition-all">
             {icon}
         </div>
         <div>
             <h3 className="font-bold text-slate-900 text-lg">{title}</h3>
-            <p className="text-blue-600 font-medium">{detail}</p>
+            <p className="text-primary font-medium">{detail}</p>
             <p className="text-slate-400 text-sm mt-1">{desc}</p>
         </div>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import {Hand, LayoutDashboard, Settings, Users, Video} from "lucide-react";
+import {Hand, Handshake, LayoutDashboard, Settings, Users, Video} from "lucide-react";
 import {cn} from "@/lib/utils";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
@@ -23,8 +23,8 @@ export function DashboardSidebar() {
             {/* Brand */}
             <div className="p-6">
                 <div className="flex items-center gap-2 mb-8">
-                    <div className="bg-blue-600 p-1.5 rounded-xl text-white">
-                        <Hand className="w-4 h-4 fill-white" />
+                    <div className="bg-primary p-1.5 rounded-xl text-white">
+                        <Handshake className="w-4 h-4 fill-white" />
                     </div>
                     <h2 className="text-lg font-bold tracking-tight text-slate-900">Sign Bridge</h2>
                 </div>
@@ -40,8 +40,8 @@ export function DashboardSidebar() {
                                 className={cn(
                                     "flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-sm font-semibold",
                                     isActive
-                                        ? "bg-white shadow-sm text-blue-600 ring-1 ring-slate-200"
-                                        : "text-slate-500 hover:bg-white hover:text-blue-600"
+                                        ? "bg-white shadow-sm text-primary ring-1 ring-ring"
+                                        : "text-slate-500 hover:bg-white hover:text-chart-3"
                                 )}
                             >
                                 <item.Icon className="w-4 h-4" />

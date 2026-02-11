@@ -12,10 +12,10 @@ export function HistoryCard({ item }) {
     const isMissed = item.type === "missed";
 
     return (
-        <div className="group bg-white p-6 rounded-[32px] shadow-sm border border-slate-50 hover:shadow-xl hover:shadow-blue-900/[0.03] transition-all duration-500">
+        <div className="group bg-white p-6 hover:shadow-xl hover:shadow-blue-900/[0.03] transition-all duration-500">
             <div className="flex items-center gap-8">
                 <div className="relative flex-shrink-0">
-                    <Avatar className={cn("w-20 h-20 rounded-2xl shadow-lg", isMissed && "grayscale opacity-50")}>
+                    <Avatar className={cn("w-[5vw] h-[5vw] rounded-2xl shadow-lg", isMissed && "grayscale opacity-50")}>
                         <AvatarImage src={item.avatar} />
                         <AvatarFallback>{item.name[0]}</AvatarFallback>
                     </Avatar>
@@ -29,17 +29,6 @@ export function HistoryCard({ item }) {
                                 {item.name}
                             </h3>
                             {item.verified && <CheckCircle2 className="w-4 h-4 text-blue-600" />}
-                        </div>
-                        <p className="text-blue-600 font-bold text-sm mt-0.5">{item.date}</p>
-                    </div>
-
-                    <div className="flex items-center gap-6">
-                        {item.duration && (
-                            <div className="flex items-center gap-2 text-slate-400 text-xs font-semibold">
-                                <Timer className="w-3.5 h-3.5" />
-                                <span>{item.duration}</span>
-                            </div>
-                        )}
 
                         <Badge
                             variant="outline"
@@ -57,26 +46,28 @@ export function HistoryCard({ item }) {
                                 {item.type}
                             </div>
                         </Badge>
+                        </div>
+                        <div className="flex items-center justify-start gap-3">
 
-                        {/* Waveform Visualization */}
-                        {!isMissed && (
-                            <div className="flex items-end gap-0.5 h-6 ml-2 group-hover:opacity-100 opacity-20 transition-opacity">
-                                {[2, 4, 7, 5, 3, 6, 4, 2].map((h, i) => (
-                                    <div key={i} className="bg-blue-600/20 rounded-full w-0.5" style={{ height: `${h * 10}%` }} />
-                                ))}
+                        <p className="text-blue-600 font-bold text-sm mt-0.5">{item.date}</p>
+                        {item.duration && (
+                            <div className="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+                                <Timer className="w-3.5 h-3.5" />
+                                <span>{item.duration}</span>
                             </div>
                         )}
+                        </div>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-3">
                     <Button
-                        variant="outline"
+                        variant="default"
                         className={cn(
-                            "min-w-[140px] px-6 py-5 rounded-xl font-bold transition-all duration-300 active:scale-95 gap-2 border-2 h-auto text-xs",
+                            "text-md text-white",
                             isMissed
-                                ? "border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white"
-                                : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                                ? "hover:bg-slate-800 hover:text-white"
+                                : "hover:bg-chart-3 hover:text-white"
                         )}
                     >
                         <RotateCcw className="w-4 h-4" />
