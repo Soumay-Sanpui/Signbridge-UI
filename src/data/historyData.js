@@ -1,0 +1,37 @@
+export const historyData = [
+    {
+        id: 1,
+        name: "Sarah Jenkins",
+        date: "Yesterday, 4:15 PM",
+        duration: "24m 12s",
+        type: "incoming",
+        verified: true,
+        avatar: "https://github.com/shadcn.png",
+    },
+    {
+        id: 2,
+        name: "David Miller",
+        date: "Oct 12, 10:30 AM",
+        duration: "8m 45s",
+        type: "outgoing",
+        verified: false,
+        avatar: "https://github.com/shadcn.png",
+    },
+    {
+        id: 3,
+        name: "Maria Garcia",
+        date: "Oct 11, 09:12 AM",
+        type: "missed",
+        verified: false,
+        avatar: "https://github.com/shadcn.png",
+    },
+    {
+        id: 4,
+        name: "Robert Fox",
+        date: "Oct 10, 02:30 PM",
+        duration: "15m 00s",
+        type: "incoming",
+        verified: true,
+        avatar: "https://github.com/shadcn.png",
+    },
+];

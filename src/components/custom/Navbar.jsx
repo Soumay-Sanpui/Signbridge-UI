@@ -1,10 +1,10 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Dashboard", href: "/dashboard" },
   { label: "Contact", href: "/contact" },
 ];
 

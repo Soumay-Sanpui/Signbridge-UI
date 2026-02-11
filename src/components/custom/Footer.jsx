@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Handshake, Globe, AtSign, Circle, Github } from "lucide-react";
+import {AtSign, Github, Globe, Handshake} from "lucide-react";
 
 const Footer = () => {
     return (
@@ -83,12 +83,11 @@ const Footer = () => {
                             <span>View Source on GitHub</span>
                         </Link>
                     </div>
-
-                    <div className="flex items-center gap-2 px-3 py-1 bg-green-50 rounded-full border border-green-100">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-emerald-700 text-xs font-semibold uppercase tracking-wider">
-                            All systems operational
-                        </span>
+                    <div className="max-w-2xl text-center">
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            This project is currently in active development and is not yet intended for production use. All external assets, trademarks, and brand names are the property of their respective copyright holders.
+                        </p>
+                        <p className="text-xs text-gray-400 leading-relaxed mt-2">Signbridge - Connect with the world.</p>
                     </div>
                 </div>
             </div>
