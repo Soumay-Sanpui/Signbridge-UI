@@ -5,12 +5,10 @@ export function proxy(request) {
     const isPublicPath = path === '/login' || path === '/register';
     const session = request.cookies.get('session_user')?.value;
 
-    // 1. Redirect unauthenticated users from protected routes to register
-    if (path.startsWith('/dashboard') && !session) {
-        return NextResponse.redirect(new URL('/register', request.url));
-    }
+    // Allow access to dashboard without requiring session
+    // Users can access with prefilled demo data if not logged in
 
-    // 2. Redirect authenticated users from public auth routes to dashboard
+    // Redirect authenticated users from public auth routes to dashboard
     if (isPublicPath && session) {
         return NextResponse.redirect(new URL('/dashboard', request.url));
     }

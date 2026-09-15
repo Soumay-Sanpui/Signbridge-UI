@@ -53,15 +53,32 @@ export async function registerUser(prevState, formData) {
             [fullname, email, hashedPassword]
         );
 
+        if (!result.rows[0]?.id) {
+            return { error: 'Failed to create user. Please try again.' };
+        }
+
         const newUser = { id: result.rows[0].id, email, username: fullname };
         await createSession(newUser);
 
-    } catch (error) {
-        console.error('Registration error:', error);
-        return { error: 'Something went wrong. Please try again.' };
-    }
+        redirect('/dashboard');
 
-    redirect('/dashboard');
+    } catch (error) {
+        const errorDetails = {
+            type: error?.type || typeof error,
+            message: error?.message || '',
+            code: error?.code || '',
+            name: error?.name || '',
+        };
+        
+        console.error('Registration database error:', errorDetails);
+        console.error('Full error object:', error);
+        
+        if (error?.code === '23505') {
+            return { error: 'Email already registered' };
+        }
+        
+        return { error: 'Registration failed. Please check your connection and try again.' };
+    }
 }
 
 export async function loginUser(prevState, formData) {
@@ -88,11 +105,20 @@ export async function loginUser(prevState, formData) {
         }
 
         await createSession(user);
+        redirect('/dashboard');
 
     } catch (error) {
-        console.error('Login error:', error);
-        return { error: 'Something went wrong. Please try again.' };
+        let errorMessage = 'Unknown error occurred';
+        
+        if (error instanceof Error) {
+            errorMessage = error.message;
+        } else if (error && typeof error === 'object' && 'message' in error) {
+            errorMessage = error.message;
+        } else if (error && typeof error === 'string') {
+            errorMessage = error;
+        }
+        
+        console.error('Login error details:', { error, errorMessage, stack: error?.stack });
+        return { error: 'Login failed. Please try again.' };
     }
-
-    redirect('/dashboard');
 }
